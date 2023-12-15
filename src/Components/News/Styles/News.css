@@ -1,0 +1,67 @@
+.news {
+  margin: 100px 2.5rem;
+  font-family: var(--main-text);
+  & > div {
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      border: 1px solid black;
+      top: 50%;
+      background-color: white;
+      transform: translateY(-50%);
+      transition: opacity .3s ease-in-out;
+      padding: .75rem .5rem;
+      display: flex;
+      & > svg {
+
+        width: 30px;
+        height: 20px;
+      }
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      right: 0;
+    }
+    
+    .container {
+      overflow-x: scroll;
+      display: flex;
+      gap: .75rem;
+      width: 100%;
+      overflow-x: scroll;
+      padding-bottom: 2rem;
+      & > div {
+        transition: border .3s ease-out;
+        width: 100%;
+        border: 1px solid transparent;
+        & > img {
+          width: 250px;
+          height: 300px;
+  
+        }
+      }
+      & > div:hover {
+        border: 1px solid black
+      }
+    }
+
+  }
+}
+
+.news > div > .container::-webkit-scrollbar-thumb {
+  background-color: #000; /* Color del thumb */
+  border-radius: 6px; /* Bordes redondeados del thumb */
+  height: 5px;
+
+}
+
+.news > div > .container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del track */
+
+}
+.news > div > .container::-webkit-scrollbar {
+  height: 5px;
+}

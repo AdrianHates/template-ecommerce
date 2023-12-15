@@ -1,0 +1,51 @@
+.links {
+  display: flex;
+  justify-content: center;
+  padding: 40px 2rem;
+  gap: 2.5rem;
+  & > div {
+    max-width: 200px;
+  }
+  .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+  }
+  .sets {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.75rem;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      & > h3 {
+        margin-bottom: 1.5rem;
+      }
+      & > div {
+        & > a {
+          & > img {
+            width: 200px;
+
+          }
+        }
+      }
+    }
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    & > div {
+      display: inherit;
+      flex-direction: inherit;
+      gap: .25rem
+    }
+  }
+}

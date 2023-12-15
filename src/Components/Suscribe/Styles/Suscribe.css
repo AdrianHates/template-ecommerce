@@ -1,0 +1,16 @@
+.suscribe {
+  background-color: #ede734;
+  padding: 40px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: var(--main-text);
+  & > h2 {
+    font-size: 27.5px;
+  }
+  & > button {
+    background-color: black;
+    color: white;
+  }
+}
