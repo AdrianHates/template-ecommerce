@@ -42,7 +42,6 @@ export default function News ( { array } ) {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  console.log()
   return(
     <section className='news'>
       <h3>News</h3>      
@@ -58,12 +57,19 @@ export default function News ( { array } ) {
             array.map( (element,i) => {
               return(
                 <div key={i}>
-                <img src={element.image} />
+                  <div>
+                  <img src={element.image} />
+                  <div>${element.price}</div>
+                  </div>
+                  
+
+                  
+
                 <div>
                   <h3>{element.title}</h3>
-                  <p>{element.price}</p>
                   <p>{element.category}</p>
                 </div>
+
               </div>
               )
               

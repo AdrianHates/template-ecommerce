@@ -14,3 +14,12 @@
     color: white;
   }
 }
+
+@media (max-width: 960px) {
+  .suscribe {
+    flex-direction: column;
+    & > button {
+      margin: auto;
+    }
+  }
+}

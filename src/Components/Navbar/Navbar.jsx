@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import './Styles/Navbar.css'
 import LoginCar from "./LoginCar"
+import Search from './Search'
+import { shortArrowDown } from "../../assets/icons"
 
 const opciones = [
   {
@@ -21,7 +23,7 @@ const opciones = [
   }
 ]
 
-const messages = ["ENVÍO GRATIS EXCLUSIVO PARA MIEMBROS ADICLUB🚚",'AHORA PUEDES COMUNICARTE CON NOSOTROS A TRAVÉS DE WHATSAPP']
+const messages = ["ENVÍO GRATIS EXCLUSIVO PARA MIEMBROS ADICLUB🚚",'AHORA PUEDES COMUNICARTE CON NOSOTROS A TRAVÉS DE WHATSAPP', 'AHORRA Y CELEBRA: HASTA 40% OFF🎅🏻🎁']
 
 
 export default function Navbar( { logo } ) {
@@ -39,7 +41,7 @@ export default function Navbar( { logo } ) {
           <div className="nav-slider">
             {
               messages.map((x,i) => <div key={i} className={`nav-slide ${currentIndex === i ? 'nav-fade' : ''}`} >
-              {x}
+              {x}{shortArrowDown('white')}
             </div>)
             }
           </div>
@@ -47,6 +49,9 @@ export default function Navbar( { logo } ) {
     }
 
     <nav>
+      <div>
+        ☰
+      </div>
       <a>
         <img alt='logo' src={logo} />
 
@@ -54,12 +59,16 @@ export default function Navbar( { logo } ) {
       <ul>
         {
           opciones.map( (x,i) => 
-            <div key={i}>
+            <li key={i}>
               {x.name}
-            </div>
+            </li>
             )
         }
+
+        
       </ul>
+      <Search />
+
       <LoginCar />
     </nav>
     </>
