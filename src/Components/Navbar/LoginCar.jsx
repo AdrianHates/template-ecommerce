@@ -1,5 +1,4 @@
 import { cart, magnifyingGlass, user } from "../../assets/icons";
-import Search from "./Search";
 
 export default function LoginCar () {
   return(
@@ -8,9 +7,11 @@ export default function LoginCar () {
       <li>
         {user}
       </li>
-      <li>
+      
+      <li className="search">
         {magnifyingGlass}
       </li>
+      
       <li>
         {cart}
       </li>

@@ -1,9 +1,10 @@
+import { rightArrow } from '../../assets/icons'
 import './Styles/Suscribe.css'
 export default function Suscribe ( { object } ) {
   return(
     <section className="suscribe">
       <h2>{object.h2}</h2>
-      <button className='button-first-design'>{object.button}</button>
+      <button className='button-first-design'>{object.button}{rightArrow('white')}</button>
     </section>
   )
 }

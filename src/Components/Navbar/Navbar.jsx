@@ -25,7 +25,6 @@ const opciones = [
 
 const messages = ["ENVÍO GRATIS EXCLUSIVO PARA MIEMBROS ADICLUB🚚",'AHORA PUEDES COMUNICARTE CON NOSOTROS A TRAVÉS DE WHATSAPP', 'AHORRA Y CELEBRA: HASTA 40% OFF🎅🏻🎁']
 
-
 export default function Navbar( { logo } ) {
   const [currentIndex, setCurrentIndex] = useState(0)
   useEffect(() => {
@@ -44,15 +43,13 @@ export default function Navbar( { logo } ) {
               {x}{shortArrowDown('white')}
             </div>)
             }
-          </div>
-          
+          </div>          
     }
-
     <nav>
       <div>
         ☰
       </div>
-      <a>
+      <a href='#'>
         <img alt='logo' src={logo} />
 
       </a>
@@ -63,12 +60,11 @@ export default function Navbar( { logo } ) {
               {x.name}
             </li>
             )
-        }
-
-        
+        }        
       </ul>
+      
       <Search />
-
+      
       <LoginCar />
     </nav>
     </>

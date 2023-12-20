@@ -29,7 +29,7 @@
     .container {
       overflow-x: scroll;
       display: flex;
-      gap: 2rem;
+      gap: 5rem;
       width: 100%;
       overflow-x: scroll;
       padding-bottom: 2rem;
@@ -38,7 +38,7 @@
         transition: border .3s ease-out;
         width: 100%;
 
-        & > div {
+        & > div:first-of-type {
           width: 200px;
           height: 250px;
           position: relative;
@@ -57,10 +57,21 @@
             
           }
         }
-        & > div:hover > div {
+        & > div:first-of-type:hover > div {
           bottom: 5px
         }
-      
+        & > div:nth-of-type(2) {
+          & > h3 {
+            font-family: var(--main-text);
+
+          }
+          & > p {
+            font-family: var(--main-text);
+            font-weight: 400;
+            color: var(--c-gray-1)
+
+          }
+        }
       }
       
     }

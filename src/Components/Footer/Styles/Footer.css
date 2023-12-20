@@ -21,3 +21,21 @@
     }
   }
 }
+
+@media (max-width: 960px) {
+
+  #footer {
+
+    & > div:first-of-type {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      
+      & > div {
+        border-right: none;
+
+      }
+    }
+  }
+}
